@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>А & К | Свадебное приглашение</title>
+    <meta name="description" content="Приглашение на роспись  Александра и Ксении — 10 октября 2026">
+    
+    <style>
+        @font-face {
+            font-family: 'Felidae';
+            src: url('https://raw.githubusercontent.com/Glesya-cod/assets/main/Felidae.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+
+    <style>
+        :root {
+            --text-main: #000000;
+            --text-secondary: #000000;
+            --accent-color: #bfa094;
+            --bg-color: #ffffff;
+            --font-family: 'Felidae', serif;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--font-family);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            font-weight: 400;
+        }
+
+        section {
+            padding: 70px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero { 
+            min-height: 100vh; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            padding: 40px 20px;
+        }
+        
+        .initials {
+            font-family: var(--font-family);
+            font-size: 5rem;
+            font-weight: 400;
+            font-style: italic;
+            letter-spacing: 8px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: var(--text-main);
+        }
+        
+        .initials .separator {
+            width: 1px;
+            height: 50px;
+            background-color: var(--text-main);
+            opacity: 0.3;
+            margin-top: 10px;
+        }
+        
+        .main-media {
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto 50px auto;
+            display: block;
+        }
+
+        .video-caption {
+            font-family: var(--font-family);
+            font-size: 1.25rem;
+            font-style: italic;
+            letter-spacing: 1px;
+            color: var(--text-main);
+            margin: -15px 0 40px;
+        }
+        
+        .wedding-date {
+            font-family: var(--font-family);
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            color: var(--text-main);
+        }
+
+        .welcome-text {
+            font-family: var(--font-family);
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: var(--text-main);
+            margin-bottom: 60px;
+            line-height: 1.8;
+            letter-spacing: 1px;
+            max-width: 600px;
+        }
+        
+        .scroll-arrow {
+            width: 1px;
+            height: 60px;
+            background: linear-gradient(to bottom, var(--text-main) 0%, transparent 100%);
+            margin: 0 auto;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); opacity: 1; }
+            40% { transform: translateY(-10px); opacity: 0.7; }
+            60% { transform: translateY(-5px); opacity: 0.8; }
+        }
+
+        .timer-container { display: flex; justify-content: center; gap: 40px; margin: 60px 0; flex-wrap: wrap; }
+        .timer-item { display: flex; flex-direction: column; align-items: center; min-width: 80px; }
+        
+        .timer-num { 
+            font-family: var(--font-family);
+            font-size: 4rem; 
+            font-weight: 500; 
+            line-height: 1;
+            color: var(--text-main);
+            text-align: center;
+            display: inline-block;    
+            min-width: 1.2em;         
+        }
+
+        .timer-label { 
+            font-size: 0.7rem; 
+            text-transform: uppercase; 
+            letter-spacing: 3px; 
+            color: var(--text-secondary); 
+            margin-top: 15px; 
+            font-weight: 400; 
+        }
+
+        .timeline { position: relative; margin-top: 50px; }
+        .timeline::before { content: ''; position: absolute; top: 0; bottom: 0; left: 50%; width: 1px; background: #e0e0e0; transform: translateX(-50%); z-index: -1; }
+        .program-item { margin-bottom: 70px; background: #fff; padding: 10px 0; position: relative; }
+        .program-icon { width: 55px; height: 55px; margin: 0 auto 20px; display: block; object-fit: contain; }
+        
+        .time { 
+            font-family: var(--font-family);
+            font-size: 3.5rem; 
+            font-weight: 500; 
+            color: #000000; 
+            margin-bottom: 15px; 
+            letter-spacing: 2px; 
+            display: inline-block;
+            min-width: 4ch;           
+        }
+
+        .event-title { 
+            font-weight: 700;
+            text-transform: uppercase; 
+            font-size: 1.1rem; 
+            letter-spacing: 3px; 
+            margin-bottom: 12px;
+            color: #000000;
+        }
+        
+        .event-desc { 
+            font-weight: 400; 
+            color: #000000; 
+            font-style: normal; 
+            font-size: 1.1rem; 
+        }
+
+        .location-block { margin-bottom: 50px; }
+        .location-name { 
+            font-size: 1.8rem; 
+            font-weight: 700;
+            letter-spacing: 2px; 
+            margin-bottom: 15px; 
+            text-transform: uppercase; 
+        }
+        .location-name a {
+            color: var(--text-main);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+        .location-name a:hover { color: var(--accent-color); }
+        .location-img {
+            width: 100%;
+            max-width: 500px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        .location-address { font-weight: 400; color: var(--text-secondary); line-height: 1.8; font-size: 0.95rem; }
+
+        .details-list { list-style: none; margin-top: 40px; }
+        .details-list li { margin-bottom: 35px; font-weight: 400; line-height: 1.8; font-size: 1.05rem; }
+
+        .rsvp-form { max-width: 500px; margin: 0 auto; text-align: left; }
+        .form-group { margin-bottom: 30px; }
+        .form-label { display: block; margin-bottom: 15px; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; }
+        
+        .tg-input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: var(--font-family);
+            font-size: 1rem;
+            color: var(--text-main);
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        .tg-input:focus { border-color: var(--accent-color); }
+
+        .radio-group, .check-group { display: flex; flex-direction: column; gap: 14px; }
+        .custom-radio, .custom-check { display: flex; align-items: center; cursor: pointer; font-size: 0.95rem; font-weight: 400; }
+        .custom-radio input, .custom-check input { margin-right: 12px; accent-color: var(--text-main); width: 18px; height: 18px; }
+        
+        .submit-btn { 
+            width: 100%; 
+            padding: 18px; 
+            background-color: var(--text-main); 
+            color: #fff; 
+            border: none; 
+            text-transform: uppercase; 
+            letter-spacing: 3px; 
+            font-size: 0.85rem; 
+            font-weight: 600; 
+            cursor: pointer; 
+            transition: all 0.3s ease; 
+            margin-top: 25px; 
+            border-radius: 4px; 
+            font-family: var(--font-family);
+        }
+        .submit-btn:hover { opacity: 0.9; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .submit-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+        #thankYouScreen { 
+            display: none; 
+            min-height: 80vh; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+        }
+        
+        .thank-you-layout {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+
+        .thank-you-text-col { flex: 1; min-width: 250px; text-align: center; }
+        .thank-you-text-col.left h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--text-main);
+            margin-bottom: 0;
+        }
+        .thank-you-text-col.right { text-align: center; }
+
+        .bouquet-img {
+            max-width: 100%;
+            height: auto;
+            max-height: 450px;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+        }
+
+        .credits {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-top: 10px;
+        }
+
+        .music-toggle {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--text-main);
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            opacity: 0;
+            pointer-events: none;
+        }
+        .music-toggle.visible { opacity: 1; pointer-events: auto; }
+        .music-toggle:hover { transform: scale(1.1); box-shadow: 0 6px 20px rgba(0,0,0,0.3); }
+        .music-toggle.playing { animation: pulse-ring 2s infinite; }
+        @keyframes pulse-ring {
+            0% { box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.4); }
+            70% { box-shadow: 0 0 0 12px rgba(0, 0, 0, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 0, 0, 0); }
+        }
+
+        @media (max-width: 600px) {
+            .initials { font-size: 3.5rem; gap: 10px; }
+            .initials .separator { height: 35px; }
+            .video-caption { font-size: 1.05rem; }
+            .wedding-date { font-size: 1.5rem; letter-spacing: 2px; }
+            .welcome-text { font-size: 1.1rem; }
+            .timer-container { gap: 20px; }
+            .timer-item { min-width: 60px; }
+            .timer-num { font-size: 2.8rem; }
+            .timeline::before { display: none; }
+            .program-icon { width: 45px; height: 45px; }
+            .time { font-size: 2.5rem; }
+            .location-name { font-size: 1.4rem; }
+            .location-img { height: 200px; max-width: 100%; }
+            .music-toggle { bottom: 15px; right: 15px; width: 44px; height: 44px; font-size: 1rem; }
+            .thank-you-layout { flex-direction: column; gap: 20px; }
+            .thank-you-text-col.left h2 { font-size: 1.8rem; }
+            .bouquet-img { max-height: 300px; }
+        }
+    </style>
+</head>
+<body>
+
+    <audio id="bgMusic" loop preload="auto">
+        <source src="https://raw.githubusercontent.com/Glesya-cod/assets/main/Marvin_Gaye_Tammi_Terrell_-_Aint_No_Mountain_High_Enough_47924206.mp3" type="audio/mpeg">
+    </audio>
+
+    <button class="music-toggle" id="musicToggle" aria-label="Включить/выключить музыку">▶</button>
+
+    <section class="hero">
+        <div class="initials">
+            <span>А</span>
+            <div class="separator"></div>
+            <span>К</span>
+        </div>
+        
+        <img src="https://raw.githubusercontent.com/Glesya-cod/assets/main/IMG_2693.gif" alt="Александр и Ксения" class="main-media">
+
+        <p class="video-caption">Мы будем счастливы видеть вас на нашей росписи</p>
+        <div class="wedding-date">10 октября 2026</div>
+
+        <p class="welcome-text">
+            Дорогие гости!<br><br>
+            В нашей жизни предостоят счастливые перемены!<br>
+            Мы хотим, чтобы в этот день рядом с нами были самые близкие и дорогие для нас люди. Будем рады разделить с вами этот праздник.<br><br>
+            С любовью,<br>
+            Александр и Ксения
+        </p>
+        <div class="scroll-arrow"></div>
+    </section>
+
+    <section>
+        <h2 style="font-size: 1.1rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 40px;">До росписи осталось</h2>
+        <div class="timer-container" id="timer">
+            <div class="timer-item"><span class="timer-num" id="days">0</span><span class="timer-label">Дней</span></div>
+            <div class="timer-item"><span class="timer-num" id="hours">0</span><span class="timer-label">Часов</span></div>
+            <div class="timer-item"><span class="timer-num" id="minutes">0</span><span class="timer-label">Минут</span></div>
+            <div class="timer-item"><span class="timer-num" id="seconds">0</span><span class="timer-label">Секунд</span></div>
+        </div>
+    </section>
+
+    <section>
+        <h2 style="font-size: 1.8rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 50px;">Программа дня</h2>
+        <div class="timeline">
+            <div class="program-item">
+                <img src="https://uploads.static.fo.vin/system/useruploads/images/6a9d/abd6/a923/221c/9681/ef33/original/6a9dabd5a923221c9681ef32.jpg?1788718038" alt="Сбор гостей" class="program-icon">
+                <div class="time">16:00</div>
+                <div class="event-title">Сбор гостей</div>
+                <div class="event-desc">Просим взять с собой хорошее настроение и улыбку</div>
+            </div>
+            <div class="program-item">
+                <img src="https://uploads.static.fo.vin/system/useruploads/images/6a9d/ac43/a923/221c/9681/ef38/original/6a9dac43a923221c9681ef37.jpg?1788718147" alt="Свадебная церемония" class="program-icon">
+                <div class="time">16:30</div>
+                <div class="event-title">Свадебная церемония</div>
+                <div class="event-desc">Одно из самых ценных событий нашей жизни...</div>
+            </div>
+            <div class="program-item">
+                <img src="https://uploads.static.fo.vin/system/useruploads/images/6a9d/ac64/a923/221c/9de6/3e4c/original/6a9dac63a923221c9de63e4b.jpg?1788718180" alt="Праздничный банкет" class="program-icon">
+                <div class="time">18:00</div>
+                <div class="event-title">Праздничный банкет</div>
+                <div class="event-desc">Время вкусной еды, теплых слов и важных моментов</div>
+            </div>
+            <div class="program-item">
+                <img src="https://uploads.static.fo.vin/system/useruploads/images/6a9d/ac89/a923/2271/0b4f/4f77/original/6a9dac89a92322710b4f4f76.jpg?1788718217" alt="Окончание мероприятия" class="program-icon">
+                <div class="time">23:00</div>
+                <div class="event-title">Окончание мероприятия</div>
+                <div class="event-desc">К сожалению, даже такой прекрасный вечер может закончиться</div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2 style="font-size: 1.8rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 50px;">Локации</h2>
+        <div class="location-block">
+            <img src="https://sun9-9.vkuserphoto.ru/s/v1/ig2/Crwp-DZZO5DpHlcq4YVOQrrrYapofQW9UJ3VGHLWUA5Gvh7ySlwruQqlxg_xMBCmkXsDLZHjcHy2apdg90E_JG5s.jpg?quality=95&as=32x18,48x26,72x39,108x59,160x88,240x132,360x197,480x263,540x296,640x351,720x395,1080x592,1280x702&from=bu&u=27LvMC-42Q_2Nj8lINcWKROOHGGvihm6zKuwP_H6K6s&cs=1280x0" alt="Митинский ЗАГС" class="location-img">
+            <h3 class="location-name">
+                <a href="https://yandex.ru/maps/?text=Дубравная+ул.+48а+Москва+Митинский+ЗАГС" target="_blank" rel="noopener noreferrer">Митинский ЗАГС</a>
+            </h3>
+            <p class="location-address">Дубравная ул., 48а, Москва, Россия, 125368<br>(Мраморный зал)</p>
+        </div>
+        <div class="location-block">
+            <img src="https://sun9-25.vkuserphoto.ru/s/v1/ig2/ndGgnmdoIt6kSEIvmg-HEWeMn2yDKBt7UOZ4u95qk-VvpbUoNkj-Kt920eszmIUHiS3ukRMb_x1qr0Tm503chxCb.jpg?quality=95&as=32x38,48x57,72x85,108x127,160x189,240x283,360x425,480x567,540x637,640x755,720x850,992x1171&from=bu&u=Z6ari48CzxXZkeWyGw06jJ7-xOjgwwsrEpiWQnuQmkI&cs=992x0" alt="Pro. Хинкали by Novikov" class="location-img">
+            <h3 class="location-name">
+                <a href="https://yandex.ru/maps/?text=Красногорский+бульвар+3А+Красногорск+Pro+Хинкали+by+Novikov" target="_blank" rel="noopener noreferrer">Pro. Хинкали by Novikov</a>
+            </h3>
+            <p class="location-address">Красногорск, Красногорский бульвар, 3А<br>(Павшинская пойма)</p>
+        </div>
+    </section>
+
+    <section>
+        <h2 style="font-size: 1.8rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 40px;">Дресс-код</h2>
+        <ul class="details-list">
+            <li>Будем рады видеть вас в праздничных нарядах — пусть этот день будет красивым во всех деталях.</li>
+            <li>Спасибо за вашу отзывчивость!</li>
+        </ul>
+    </section>
+
+    <section id="rsvpSection">
+        <h2 style="font-size: 1.8rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 15px;">Присутствие на торжестве</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 35px; font-weight: 400; line-height: 1.8;">Ваши ответы на вопросы очень помогут нам при организации.<br>Будем ждать ответ до 30.09.2026</p>
+        
+        <!-- ФОРМА ОТПРАВКИ НА EMAIL -->
+        <form class="rsvp-form" action="https://formsubmit.co/
+rusinaksenia@bk.ru" method="POST">
+            <input type="hidden" name="_subject" value="💍 Ответ приглашение на роспись.">
+            <input type="hidden" name="_next" value="https://squ1dy.fun/?success=1">
+            <input type="hidden" name="_captcha" value="false">
+            
+            <div class="form-group">
+                <label class="form-label">Ваш Telegram (для связи)*</label>
+                <input type="text" name="Telegram" class="tg-input" placeholder="@username" required>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label">Сможете ли вы присутствовать?*</label>
+                <div class="radio-group">
+                    <label class="custom-radio"><input type="radio" name="Присутствие" value="Я приду" required> Я приду</label>
+                    <label class="custom-radio"><input type="radio" name="Присутствие" value="Не приду"> Не приду</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label">Предпочтения по напиткам:</label>
+                <p style="font-size: 0.85rem; color: #888; margin-bottom: 15px; font-weight: 400;">Мы постараемся учесть все вкусы.</p>
+                <div class="check-group">
+                    <label class="custom-check"><input type="checkbox" name="Напитки" value="Пиво"> Пиво</label>
+                    <label class="custom-check"><input type="checkbox" name="Напитки" value="Вино красное"> Вино красное</label>
+                    <label class="custom-check"><input type="checkbox" name="Напитки" value="Вино белое"> Вино белое</label>
+                    <label class="custom-check"><input type="checkbox" name="Напитки" value="Виски / Коньяк"> Виски / Коньяк</label>
+                    <label class="custom-check"><input type="checkbox" name="Напитки" value="Водка"> Водка</label>
+                    <label class="custom-check"><input type="checkbox" name="Напитки" value="Безалкогольное"> Безалкогольное</label>
+                </div>
+            </div>
+            
+            <button type="submit" class="submit-btn">Отправить</button>
+        </form>
+    </section>
+
+    <section id="thankYouScreen">
+        <div class="thank-you-layout">
+            <div class="thank-you-text-col left">
+                <h2>Мы будем рады видеть вас!</h2>
+            </div>
+            <div class="thank-you-image-col">
+                <img src="https://sun9-66.vkuserphoto.ru/s/v1/ig2/fm4ZrV5aVirFr3j5iW8aNutGw5vfq4bUQJgG0i5niRVdCo7ECGJBlV1yyusrXd38n-sjBpQtQysYmWNwA-j9387r.jpg?quality=95&as=32x18,48x27,72x40,108x61,160x90,240x135,360x202,480x270,540x304,640x360,720x405,1080x607,1280x720&from=bu&u=C3iyIl-PiCsXvNvNol24oP-61DTde4hzPD_o7BGsjmQ&cs=1280x0" alt="Букет невесты" class="bouquet-img">
+            </div>
+            <div class="thank-you-text-col right">
+                <div class="credits">
+                    <p>Особая благодарность нашему другу Глебу, который создал этот сайт для нас.</p>
+                    <p style="margin-top: 8px; font-weight: 600; color: var(--text-main);">tg: @Squ1dya :)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Проверка: если в URL есть ?success=1, показываем экран спасибо
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('success') === '1') {
+            document.getElementById('rsvpSection').style.display = 'none';
+            document.getElementById('thankYouScreen').style.display = 'flex';
+            window.history.replaceState({}, document.title, window.location.pathname);
+        }
+
+        // Таймер обратного отсчета
+        const weddingDate = new Date('October 10, 2026 16:00:00').getTime();
+        const timerInterval = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+            if (distance < 0) {
+                clearInterval(timerInterval);
+                document.getElementById("timer").innerHTML = "<div style='font-size: 1.2rem; font-weight: 600;'>Ура! Свадьба состоялась!</div>";
+                return;
+            }
+            document.getElementById("days").innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
+            document.getElementById("hours").innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            document.getElementById("minutes").innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            document.getElementById("seconds").innerText = Math.floor((distance % (1000 * 60)) / 1000);
+        }, 1000);
+
+        // Музыка
+        const bgMusic = document.getElementById('bgMusic');
+        const musicToggle = document.getElementById('musicToggle');
+        let isPlaying = false;
+        let autoplayBlocked = false;
+
+        window.addEventListener('load', function() {
+            bgMusic.volume = 0.4;
+            bgMusic.play().then(function() {
+                isPlaying = true;
+                musicToggle.textContent = '';
+                musicToggle.classList.add('playing', 'visible');
+            }).catch(function() {
+                autoplayBlocked = true;
+                musicToggle.textContent = '▶';
+                musicToggle.classList.add('visible');
+            });
+        });
+
+        musicToggle.addEventListener('click', function() {
+            if (isPlaying) {
+                bgMusic.pause();
+                isPlaying = false;
+                musicToggle.textContent = '▶';
+                musicToggle.classList.remove('playing');
+            } else {
+                bgMusic.play();
+                isPlaying = true;
+                musicToggle.textContent = '';
+                musicToggle.classList.add('playing');
+            }
+        });
+
+        function unlockAutoplay() {
+            if (autoplayBlocked && !isPlaying) {
+                bgMusic.play().then(function() {
+                    isPlaying = true;
+                    autoplayBlocked = false;
+                    musicToggle.textContent = '';
+                    musicToggle.classList.add('playing');
+                }).catch(function() {});
+            }
+            document.removeEventListener('click', unlockAutoplay);
+            document.removeEventListener('scroll', unlockAutoplay);
+            document.removeEventListener('touchstart', unlockAutoplay);
+        }
+        document.addEventListener('click', unlockAutoplay);
+        document.addEventListener('scroll', unlockAutoplay);
+        document.addEventListener('touchstart', unlockAutoplay);
+    </script>
+</body>
+</html>
